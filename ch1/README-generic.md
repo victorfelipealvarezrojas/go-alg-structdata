@@ -282,14 +282,3 @@ func AddStudent[T IStringer](students []T, student T) []T {
 5. **Go es funcional** — Piensa en transformaciones de datos, no en objetos
 6. **Siempre usa mayúscula para exportar** — Es la convención
 7. **Usa campos nombrados en structs** — Es la práctica recomendada
-
----
-
-## Siguiente Paso: Rust
-
-Una vez domines Go, aprende Rust para:
-- Expandir tu mente con ownership y borrowing
-- Aprender funcional más puro
-- Tener oportunidades laborales reales
-
-**Stack futuro:** Go (backend) + Rust (sistemas/performance)
