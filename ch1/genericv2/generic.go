@@ -18,8 +18,8 @@ func main() {
 	result := addStudent(students, "Michael")
 	result = addStudent(result, "Jennifer")
 	result = addStudent(result, "Elaine")
-
 	fmt.Println(result)
+
 	students1 := []int{}
 	result1 := addStudent(students1, 45)
 	result1 = addStudent(result1, 64)

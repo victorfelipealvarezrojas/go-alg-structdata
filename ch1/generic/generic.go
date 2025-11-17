@@ -33,5 +33,10 @@ func AddStudent[T IStringer](students []T, student T) []T {
 	return append(students, student)
 }
 func main() {
+	students := []NameType{}
+	result := AddStudent(students, "Michael")
+	result = AddStudent(result, "Jennifer")
+	result = AddStudent(result, "Elaine")
+	fmt.Println(result)
 
 }
