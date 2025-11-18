@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func MyFilter(input []float64, f func(float64) bool) []float64 {
-	var result []float64
+func MyFilter[T any](input []T, f func(T) bool) []T {
+	var result []T
 	for _, value := range input {
 		if f(value) == true {
 			result = append(result, value)

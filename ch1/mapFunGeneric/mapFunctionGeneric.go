@@ -26,7 +26,7 @@ func main() {
 	fmt.Println(result)
 
 	result2 := genericMap(slice, func(s string) int {
-		return len(s) // "a" -> 1
+		return len(s)
 	})
 	fmt.Println(result2)
 
