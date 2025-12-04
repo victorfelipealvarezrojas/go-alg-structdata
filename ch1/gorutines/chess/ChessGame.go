@@ -17,7 +17,7 @@ func main() {
 	go player("Bobby Fischer", move)
 	go player("Boris Spassky", move)
 	// Start the move
-	move <- 1
+	move <- 1 // Inicia el primer turno
 
 	<-quit // Bloquea hasta que salga asignado un valor
 }
@@ -25,7 +25,7 @@ func main() {
 func player(name string, move chan int) {
 	for {
 
-		turn := <-move // Espera a que sea su turno
+		turn := <-move // crea una espera activa hasta que reciba un valor
 
 		n := rand.Intn(100)
 		if n <= 5 && turn >= 5 {
@@ -35,9 +35,9 @@ func player(name string, move chan int) {
 		}
 
 		fmt.Printf("Player %s has moved. Turn %d.\n", name, turn)
-		turn++ // Incrementa el turno del siguiente jugador
+		turn++ // Incrementa el turno
 
 		time.Sleep(1 * time.Second)
-		move <- turn
+		move <- turn // Pasa el turno al otro jugador envia el valor al canal
 	}
 }
